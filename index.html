@@ -18,6 +18,9 @@
     <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
     <script src="./js/react.production.min.js" ></script>
     <script src="./js/react-dom.production.min.js" ></script>
+
+    <!--script src="../tests/bundle.js"></script-->
+
     <script src="./js/browser.min.js" ></script>
     <script src="./js/marked.min.js" ></script>
 
@@ -27,7 +30,7 @@
           if (!p) p = "\n<br>\n";
           return p;
         }).join ("\n");
-        return marked.parse(s);
+        return marked.parse(text, { breaks: true });
       }
     </script>
 
